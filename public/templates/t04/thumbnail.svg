@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#faf6ec"/>
+  <!-- bingkai ganda + sudut ornamen -->
+  <rect x="40" y="40" width="720" height="920" fill="none" stroke="#b9924f" stroke-width="3"/>
+  <rect x="56" y="56" width="688" height="888" fill="none" stroke="#b9924f" stroke-width="1"/>
+  <g fill="#b9924f">
+    <path d="M40 96 l18 -18 18 18 -18 18 Z"/>
+    <path d="M724 96 l18 -18 18 18 -18 18 Z" transform="translate(-4 0)"/>
+    <path d="M40 920 l18 -18 18 18 -18 18 Z" transform="translate(0 -16)"/>
+    <path d="M724 920 l18 -18 18 18 -18 18 Z" transform="translate(-4 -16)"/>
+  </g>
+  <!-- ornamen simetris atas -->
+  <g fill="none" stroke="#1f3d2b" stroke-width="1.6">
+    <path d="M280 210 C 330 190 370 190 400 210 C 430 190 470 190 520 210"/>
+    <path d="M300 226 C 340 212 370 212 400 226 C 430 212 460 212 500 226" opacity=".55"/>
+    <circle cx="400" cy="218" r="4" fill="#1f3d2b" stroke="none"/>
+  </g>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="12" fill="#1f3d2b">UNDANGAN PERNIKAHAN</text>
+  <line x1="300" y1="330" x2="500" y2="330" stroke="#b9924f" stroke-width="1"/>
+  <path d="M400 322 l10 8 -10 8 -10 -8 Z" fill="#b9924f"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="84" letter-spacing="6" fill="#23201a">NADIA</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="48" fill="#6d2a3c">&amp;</text>
+  <text x="400" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="84" letter-spacing="6" fill="#23201a">DIMAS</text>
+  <line x1="300" y1="730" x2="500" y2="730" stroke="#b9924f" stroke-width="1"/>
+  <path d="M400 722 l10 8 -10 8 -10 -8 Z" fill="#b9924f"/>
+  <text x="400" y="800" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="8" fill="#1f3d2b">SABTU, 12 DESEMBER 2026</text>
+  <g fill="none" stroke="#1f3d2b" stroke-width="1.6">
+    <path d="M280 850 C 330 870 370 870 400 850 C 430 870 470 870 520 850"/>
+    <circle cx="400" cy="860" r="4" fill="#1f3d2b" stroke="none"/>
+  </g>
+  <text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#b9924f">No. 04 — ROYAL CLASSIC</text>
+</svg>

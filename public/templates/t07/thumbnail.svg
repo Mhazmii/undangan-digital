@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#faf4e8"/>
+  <!-- pita pola geometris (interpretasi modern, abstrak) -->
+  <g opacity="0.9">
+    <rect x="0" y="60" width="800" height="120" fill="#3a2a1a"/>
+    <g fill="none" stroke="#c9a227" stroke-width="1.6">
+      <circle cx="80" cy="120" r="34"/><circle cx="80" cy="120" r="20"/>
+      <circle cx="200" cy="120" r="34"/><circle cx="200" cy="120" r="20"/>
+      <circle cx="320" cy="120" r="34"/><circle cx="320" cy="120" r="20"/>
+      <circle cx="440" cy="120" r="34"/><circle cx="440" cy="120" r="20"/>
+      <circle cx="560" cy="120" r="34"/><circle cx="560" cy="120" r="20"/>
+      <circle cx="680" cy="120" r="34"/><circle cx="680" cy="120" r="20"/>
+    </g>
+    <rect x="0" y="820" width="800" height="120" fill="#3a2a1a"/>
+    <g fill="none" stroke="#c9a227" stroke-width="1.6">
+      <circle cx="80" cy="880" r="34"/><circle cx="80" cy="880" r="20"/>
+      <circle cx="200" cy="880" r="34"/><circle cx="200" cy="880" r="20"/>
+      <circle cx="320" cy="880" r="34"/><circle cx="320" cy="880" r="20"/>
+      <circle cx="440" cy="880" r="34"/><circle cx="440" cy="880" r="20"/>
+      <circle cx="560" cy="880" r="34"/><circle cx="560" cy="880" r="20"/>
+      <circle cx="680" cy="880" r="34"/><circle cx="680" cy="880" r="20"/>
+    </g>
+  </g>
+  <!-- lengkung awan modern -->
+  <g fill="none" stroke="#b98a2f" stroke-width="2.5">
+    <path d="M280 300 C 320 270 380 270 400 300 C 420 270 480 270 520 300"/>
+    <path d="M300 322 C 334 296 386 296 400 322 C 414 296 466 296 500 322" opacity=".55"/>
+  </g>
+  <circle cx="400" cy="312" r="5" fill="#b98a2f"/>
+  <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="12" fill="#5c2e1e">UNDANGAN PERNIKAHAN</text>
+  <text x="400" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="86" fill="#2b2018">Nadia</text>
+  <text x="400" y="630" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="50" fill="#b98a2f">&amp;</text>
+  <text x="400" y="750" text-anchor="middle" font-family="Georgia, serif" font-size="86" fill="#2b2018">Dimas</text>
+  <g fill="none" stroke="#b98a2f" stroke-width="2.5">
+    <path d="M280 700 C 320 730 380 730 400 700 C 420 730 480 730 520 700" opacity=".7"/>
+  </g>
+  <text x="400" y="972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#c9a227">No. 07 — NUSANTARA HERITAGE</text>
+</svg>

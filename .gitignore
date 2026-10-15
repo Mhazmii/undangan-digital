@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Database (jangan push data lokal)
+data/*.db
+data/*.db-shm
+data/*.db-wal
+data/*.sqlite
+data/*.sqlite3
+
+# Uploads (foto/musik user)
+public/uploads/*
+
+# Env & secrets
+.env
+!.env.example
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Runtime
+/tmp/

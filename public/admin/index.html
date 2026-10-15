@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Wedding Invitation Studio</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<noscript>Dashboard admin membutuhkan JavaScript.</noscript>
+
+<!-- ============ LOGIN VIEW ============ -->
+<div id="view-login" class="login-wrap" hidden>
+  <div class="login-box">
+    <div class="login-brand">
+      <div class="login-brand-mark">W</div>
+      <div>
+        <h1>Wedding Invitation Studio</h1>
+        <p>Panel Admin</p>
+      </div>
+    </div>
+    <form id="login-form" autocomplete="on">
+      <div class="field">
+        <label for="login-user">Nama pengguna</label>
+        <input id="login-user" name="username" type="text" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="login-pass">Kata sandi</label>
+        <input id="login-pass" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <p id="login-error" class="form-error" hidden></p>
+      <button type="submit" class="btn btn-primary btn-block" id="login-btn">Masuk</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ DASHBOARD VIEW ============ -->
+<div id="view-app" class="app" hidden>
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-mark">W</div>
+      <div class="sidebar-brand-text">
+        <strong>Invitation Studio</strong>
+        <span>Panel Admin</span>
+      </div>
+    </div>
+    <div class="sidebar-wedding">
+      <label for="wedding-picker">Undangan aktif</label>
+      <select id="wedding-picker"></select>
+      <button id="btn-new-wedding-top" class="btn btn-ghost btn-sm">+ Baru</button>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <button data-view="weddings"><span class="nav-dot"></span>Semua Undangan</button>
+      <div class="nav-group-label">Editor</div>
+      <button data-view="editor-umum"><span class="nav-dot"></span>Umum &amp; Template</button>
+      <button data-view="editor-acara"><span class="nav-dot"></span>Acara</button>
+      <button data-view="editor-seksi"><span class="nav-dot"></span>Seksi &amp; Teks</button>
+      <button data-view="editor-galeri"><span class="nav-dot"></span>Galeri</button>
+      <button data-view="editor-gift"><span class="nav-dot"></span>Amplop &amp; Gift</button>
+      <div class="nav-group-label">Tamu</div>
+      <button data-view="guests"><span class="nav-dot"></span>Daftar Tamu</button>
+      <button data-view="rsvp"><span class="nav-dot"></span>RSVP</button>
+      <button data-view="wishes"><span class="nav-dot"></span>Ucapan</button>
+      <button data-view="preview"><span class="nav-dot"></span>Pratinjau</button>
+    </nav>
+    <div class="sidebar-foot">
+      <span id="admin-user" class="sidebar-user"></span>
+      <button id="btn-logout" class="btn btn-ghost btn-sm">Keluar</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button id="btn-menu" class="btn btn-ghost btn-icon" aria-label="Menu">&#9776;</button>
+      <div class="topbar-title">
+        <h2 id="page-title">Dashboard</h2>
+        <p id="page-sub"></p>
+      </div>
+      <div class="topbar-actions" id="topbar-actions"></div>
+    </header>
+    <main id="content" class="content"></main>
+  </div>
+</div>
+
+<!-- Modal + Toast -->
+<div id="modal-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

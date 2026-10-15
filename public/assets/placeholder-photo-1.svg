@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#f4efe8"/>
+  <rect x="60" y="60" width="680" height="880" fill="none" stroke="#b9a07a" stroke-width="3"/>
+  <circle cx="400" cy="460" r="150" fill="none" stroke="#b9a07a" stroke-width="3"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#8a7355">A &amp; R</text>
+  <text x="400" y="830" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#8a7355">Momen Bahagia</text>
+</svg>

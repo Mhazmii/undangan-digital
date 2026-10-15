@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#faf7f0"/>
+  <!-- bingkai arch organik -->
+  <path d="M180 900 L180 420 C180 260 280 150 400 150 C520 150 620 260 620 420 L620 900 Z" fill="#f3efe2" stroke="#8a9a7b" stroke-width="3"/>
+  <path d="M205 875 L205 425 C205 280 295 178 400 178 C505 178 595 280 595 425 L595 875 Z" fill="none" stroke="#8a9a7b" stroke-width="1.5" opacity="0.6"/>
+  <!-- ranting botanical kiri -->
+  <g fill="none" stroke="#7c8b66" stroke-width="2.5" opacity="0.85">
+    <path d="M180 820 C 150 700 150 600 180 480"/>
+    <path d="M180 760 C 140 745 115 720 105 690"/>
+    <path d="M180 700 C 220 685 245 660 255 630"/>
+    <path d="M180 620 C 145 605 125 585 118 555"/>
+    <path d="M180 560 C 215 548 235 528 242 500"/>
+  </g>
+  <g fill="#8a9a7b" opacity="0.7">
+    <ellipse cx="105" cy="690" rx="16" ry="8" transform="rotate(-35 105 690)"/>
+    <ellipse cx="255" cy="630" rx="16" ry="8" transform="rotate(35 255 630)"/>
+    <ellipse cx="118" cy="555" rx="16" ry="8" transform="rotate(-35 118 555)"/>
+    <ellipse cx="242" cy="500" rx="16" ry="8" transform="rotate(35 242 500)"/>
+  </g>
+  <!-- ranting botanical kanan -->
+  <g fill="none" stroke="#7c8b66" stroke-width="2.5" opacity="0.85">
+    <path d="M620 820 C 650 700 650 600 620 480"/>
+    <path d="M620 760 C 660 745 685 720 695 690"/>
+    <path d="M620 700 C 580 685 555 660 545 630"/>
+    <path d="M620 620 C 655 605 675 585 682 555"/>
+    <path d="M620 560 C 585 548 565 528 558 500"/>
+  </g>
+  <g fill="#8a9a7b" opacity="0.7">
+    <ellipse cx="695" cy="690" rx="16" ry="8" transform="rotate(35 695 690)"/>
+    <ellipse cx="545" cy="630" rx="16" ry="8" transform="rotate(-35 545 630)"/>
+    <ellipse cx="682" cy="555" rx="16" ry="8" transform="rotate(35 682 555)"/>
+    <ellipse cx="558" cy="500" rx="16" ry="8" transform="rotate(-35 558 500)"/>
+  </g>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="9" fill="#7c8b66">UNDANGAN PERNIKAHAN</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="88" fill="#3a4030">Nadia</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="52" fill="#7c8b66">&amp;</text>
+  <text x="400" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="88" fill="#3a4030">Dimas</text>
+  <text x="400" y="770" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="7" fill="#7a7f6d">SABTU, 12 DESEMBER 2026</text>
+  <text x="400" y="950" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#8a9a7b">No. 03 — BOTANICAL ROMANCE</text>
+</svg>

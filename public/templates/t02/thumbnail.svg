@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#fbfbfa"/>
+  <rect x="60" y="60" width="680" height="880" fill="none" stroke="#e2e2dc" stroke-width="2"/>
+  <line x1="60" y1="280" x2="740" y2="280" stroke="#e2e2dc" stroke-width="1"/>
+  <text x="100" y="180" font-family="Arial, sans-serif" font-weight="700" font-size="24" letter-spacing="6" fill="#161616">01 / MINIMALIST</text>
+  <text x="100" y="230" font-family="Arial, sans-serif" font-size="18" letter-spacing="4" fill="#6e6e6e">UNDANGAN PERNIKAHAN</text>
+  <text x="100" y="480" font-family="Arial, sans-serif" font-weight="800" font-size="120" letter-spacing="-2" fill="#161616">AISYAH</text>
+  <text x="100" y="610" font-family="Arial, sans-serif" font-weight="800" font-size="120" letter-spacing="-2" fill="#161616">&amp; RIZKY</text>
+  <rect x="100" y="680" width="120" height="8" fill="#b4562f"/>
+  <text x="100" y="780" font-family="monospace" font-size="26" fill="#6e6e6e">12.12.2026 — JAKARTA</text>
+  <text x="100" y="880" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#161616">BUKA UNDANGAN →</text>
+</svg>

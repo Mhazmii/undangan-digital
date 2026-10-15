@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pratinjau Template — Premium Wedding Invitation Studio</title>
+<meta name="description" content="Pratinjau template undangan pernikahan dengan data contoh.">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#ece7da;color:#2a251d;font-family:Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow:auto!important}
+img,svg{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
+[hidden]{display:none!important}
+
+/* Toolbar pratinjau */
+.pv-bar{position:sticky;top:0;z-index:100;background:#211d16;color:#faf6ee;
+  display:flex;align-items:center;gap:14px;padding:12px 18px;flex-wrap:wrap}
+.pv-bar a.back{color:#faf6ee;text-decoration:none;font-size:13px;letter-spacing:.1em}
+.pv-bar a.back:hover{text-decoration:underline}
+.pv-bar .tname{font-family:Georgia,serif;font-style:italic;font-size:17px;margin-right:auto}
+.pv-bar .seg{display:flex;border:1px solid rgba(250,246,238,.4);border-radius:999px;overflow:hidden}
+.pv-bar .seg button{background:transparent;border:0;color:#faf6ee;font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase;padding:9px 18px}
+.pv-bar .seg button.active{background:#faf6ee;color:#211d16}
+.pv-note{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#c9bfa9}
+
+/* Panggung pratinjau */
+.pv-stage-wrap{display:flex;justify-content:center;padding:34px 18px 80px}
+.pv-frame{width:100%;max-width:1180px;background:#fff;position:relative;overflow:hidden;
+  border:1px solid #d8cfbd;border-radius:10px;box-shadow:0 30px 80px -40px rgba(33,29,22,.5);
+  transition:max-width .35s ease}
+.pv-frame.mobile{max-width:390px}
+/* Sampul di dalam frame (bukan fixed seperti shell) */
+.pv-frame .inv-cover{position:absolute;inset:0;z-index:50;overflow-y:auto;
+  display:flex;align-items:stretch;justify-content:center}
+.pv-frame .inv-cover.opening-mask{transition:clip-path .95s cubic-bezier(.76,0,.24,1);clip-path:inset(0 0 0 0)}
+.pv-frame .inv-cover.opening-mask.is-opening{clip-path:inset(0 0 100% 0)}
+.pv-frame .inv-cover.opening-curtain{transition:transform .85s cubic-bezier(.76,0,.24,1)}
+.pv-frame .inv-cover.opening-curtain.is-opening{transform:translateY(-101%)}
+.pv-frame .inv-cover.opening-fade,.pv-frame .inv-cover.opening-envelope,
+.pv-frame .inv-cover.opening-cinematic{transition:opacity .55s ease}
+.pv-frame .inv-cover.opening-fade.is-opening,.pv-frame .inv-cover.opening-envelope.is-opening,
+.pv-frame .inv-cover.opening-cinematic.is-opening{opacity:0}
+.pv-frame .inv-cover.is-gone{display:none}
+.pv-main{min-height:70vh}
+/* Reveal minimal untuk pratinjau (shell punya sendiri di i.html) */
+.pv-frame [data-reveal]{opacity:0;transform:translateY(18px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
+.pv-frame [data-reveal].is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .pv-frame [data-reveal]{opacity:1;transform:none;transition:none}
+  .pv-frame .inv-cover{transition:opacity .15s ease}
+}
+/* Toast pratinjau */
+#pv-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);z-index:200;
+  background:#211d16;color:#faf6ee;font-size:13px;padding:12px 22px;border-radius:3px;
+  opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;max-width:calc(100vw - 48px);text-align:center}
+#pv-toast.show{opacity:1;transform:translate(-50%,0)}
+.pv-err{max-width:520px;margin:80px auto;text-align:center;padding:40px 30px;background:#fffdf8;
+  border:1px solid #d8cfbd;border-radius:6px;font-family:Georgia,serif}
+.pv-err h1{font-size:22px;font-weight:500;margin:0 0 12px}
+.pv-err p{color:#6d6353;line-height:1.7}
+.pv-err a{color:#8a6d3b}
+</style>
+</head>
+<body>
+<header class="pv-bar">
+  <a class="back" href="/templates.html">← Galeri</a>
+  <span class="tname" id="pv-tname">Pratinjau Template</span>
+  <span class="pv-note">Mode pratinjau</span>
+  <div class="seg" role="group" aria-label="Ukuran pratinjau">
+    <button type="button" id="pv-desktop" class="active">Desktop</button>
+    <button type="button" id="pv-mobile">Mobile</button>
+  </div>
+</header>
+
+<div class="pv-stage-wrap">
+  <div class="pv-frame" id="pv-frame">
+    <section id="pv-cover" class="inv-cover" aria-label="Sampul undangan"></section>
+    <main id="pv-main" class="pv-main inv-main" hidden></main>
+  </div>
+</div>
+
+<div id="pv-toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="/js/preview.js"></script>
+</body>
+</html>

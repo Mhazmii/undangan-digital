@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Undangan Pernikahan</title>
+<meta name="description" content="Undangan pernikahan digital.">
+<meta name="theme-color" content="#faf6ee">
+<style>
+/* ============ SHELL CHROME (milik invite.js, tidak di-scope template) ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#faf6ee;color:#211d16;font-family:Georgia,'Times New Roman',serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body:not(.is-main){overflow:hidden} /* kunci scroll selama sampul */
+img,svg{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
+[hidden]{display:none!important}
+
+/* Reveal dasar (dipakai semua template; murah: opacity + transform saja) */
+[data-reveal]{opacity:0;transform:translateY(18px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1);
+  transition-delay:var(--reveal-delay,0ms)}
+[data-reveal].is-visible{opacity:1;transform:none}
+
+/* ---------- Loading ---------- */
+.inv-loading{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;gap:18px;
+  align-items:center;justify-content:center;background:#faf6ee}
+.inv-loading .ring{width:44px;height:44px;border-radius:50%;
+  border:1px solid #d8cfbd;border-top-color:#8a6d3b;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.inv-loading p{margin:0;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#5c554a}
+
+/* ---------- Sampul (cover) ---------- */
+.inv-cover{position:fixed;inset:0;z-index:50;overflow-y:auto;
+  display:flex;align-items:stretch;justify-content:center;background:#faf6ee}
+/* Transisi opening: hanya clip-path / opacity / transform (sekali jalan, tanpa flash) */
+.inv-cover.opening-mask{transition:clip-path .95s cubic-bezier(.76,0,.24,1);clip-path:inset(0 0 0 0)}
+.inv-cover.opening-mask.is-opening{clip-path:inset(0 0 100% 0)}
+.inv-cover.opening-mask.is-opening .inv-cover-inner{transform:translateY(-6vh);transition:transform .95s cubic-bezier(.76,0,.24,1)}
+.inv-cover.opening-curtain{transition:transform .85s cubic-bezier(.76,0,.24,1)}
+.inv-cover.opening-curtain.is-opening{transform:translateY(-101%)}
+.inv-cover.opening-fade,.inv-cover.opening-envelope,.inv-cover.opening-cinematic{transition:opacity .55s ease}
+.inv-cover.opening-fade.is-opening,.inv-cover.opening-envelope.is-opening,.inv-cover.opening-cinematic.is-opening{opacity:0}
+.inv-cover.is-gone{display:none}
+
+/* ---------- Main ---------- */
+.inv-main{min-height:100vh}
+
+/* ---------- Error ---------- */
+.inv-error{position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;
+  background:#faf6ee;padding:32px;text-align:center}
+.inv-error .card{max-width:420px;border:1px solid #d8cfbd;padding:40px 32px;background:#fffdf8}
+.inv-error h1{font-size:22px;font-weight:500;margin:0 0 12px}
+.inv-error p{margin:0 0 24px;color:#5c554a;line-height:1.7;font-size:15px}
+.inv-error button{border:1px solid #211d16;background:#211d16;color:#faf6ee;
+  padding:12px 28px;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.inv-error button:hover{background:transparent;color:#211d16}
+
+/* ---------- Tombol musik ---------- */
+#music-btn{position:fixed;right:18px;bottom:18px;z-index:55;width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(0,0,0,.18);background:rgba(250,246,238,.92);color:#211d16;
+  display:flex;align-items:center;justify-content:center;padding:0}
+#music-btn:hover{background:#211d16;color:#faf6ee;border-color:#211d16}
+#music-btn svg{width:20px;height:20px}
+#music-btn .icon-pause{display:none}
+#music-btn.playing .icon-pause{display:block}
+#music-btn.playing .icon-play{display:none}
+#music-btn .eq{display:none;align-items:flex-end;gap:2px;height:16px}
+#music-btn.playing .eq{display:flex}
+#music-btn.playing .eq i{width:2px;background:currentColor;animation:eq 1s ease-in-out infinite}
+#music-btn.playing .eq i:nth-child(2){animation-delay:.2s}
+#music-btn.playing .eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:5px}50%{height:15px}}
+
+/* ---------- Toast ---------- */
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);z-index:80;
+  background:#211d16;color:#faf6ee;font-size:13px;letter-spacing:.04em;
+  padding:12px 22px;border-radius:2px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
+  max-width:calc(100vw - 48px);text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Badge pratinjau ---------- */
+#preview-badge{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:65;
+  background:#211d16;color:#faf6ee;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  padding:8px 18px;border-radius:2px;font-family:Arial,sans-serif}
+
+/* ---------- Utilitas form generik (fallback bila template belum menata) ---------- */
+.inv-field{margin:0 0 16px}
+.inv-field label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.inv-field input,.inv-field textarea,.inv-field select{width:100%;font:inherit;padding:12px 4px;
+  border:0;border-bottom:1px solid #c9bfa9;background:transparent;color:inherit}
+.inv-field input:focus,.inv-field textarea:focus{outline:none;border-bottom-color:#211d16}
+.inv-field textarea{resize:vertical;min-height:96px}
+.inv-form-error{color:#a33327;font-size:13px;margin:0 0 16px;min-height:1.2em}
+.inv-form-ok{border:1px solid #c9bfa9;padding:28px;text-align:center;line-height:1.8}
+
+/* Radio kehadiran */
+.attend-row{display:flex;gap:12px}
+.attend-row label{flex:1;border:1px solid #c9bfa9;padding:14px;text-align:center;cursor:pointer;
+  font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s}
+.attend-row input{position:absolute;opacity:0;pointer-events:none}
+.attend-row label:has(input:checked){background:#211d16;color:#faf6ee;border-color:#211d16}
+.attend-row label:has(input:focus-visible){outline:2px solid #8a6d3b;outline-offset:2px}
+
+/* Hormati reduced motion: matikan transisi shell */
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1;transform:none;transition:none}
+  .inv-cover.opening-mask,.inv-cover.opening-curtain,
+  .inv-cover.opening-fade,.inv-cover.opening-envelope,.inv-cover.opening-cinematic{transition:opacity .15s ease}
+  .inv-cover.opening-mask.is-opening .inv-cover-inner{transform:none;transition:none}
+  .inv-loading .ring{animation-duration:2s}
+  #music-btn.playing .eq i{animation:none;height:8px}
+}
+</style>
+</head>
+<body>
+
+<div id="loading" class="inv-loading" role="status" aria-live="polite">
+  <div class="ring" aria-hidden="true"></div>
+  <p>Memuat undangan</p>
+</div>
+
+<section id="cover" class="inv-cover" aria-label="Sampul undangan" hidden></section>
+
+<main id="main" class="inv-main" hidden></main>
+
+<div id="error" class="inv-error" hidden>
+  <div class="card">
+    <h1 id="error-title">Undangan tidak ditemukan</h1>
+    <p id="error-msg">Tautan undangan ini tidak valid atau acara belum dipublikasikan.</p>
+    <button type="button" data-action="retry">Muat ulang</button>
+  </div>
+</div>
+
+<button id="music-btn" type="button" aria-label="Putar atau jeda musik" title="Musik" hidden>
+  <svg class="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/><path d="M9.5 8.5v7l6-3.5z" fill="currentColor" stroke="none"/>
+  </svg>
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+  <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <rect x="7" y="5" width="3.4" height="14" rx="1"/><rect x="13.6" y="5" width="3.4" height="14" rx="1"/>
+  </svg>
+</button>
+
+<div id="preview-badge" hidden>Mode Pratinjau</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="/js/invite.js"></script>
+</body>
+</html>

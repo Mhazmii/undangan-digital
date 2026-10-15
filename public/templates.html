@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galeri Template — Premium Wedding Invitation Studio</title>
+<meta name="description" content="Pilih desain undangan pernikahan digital favorit Anda dari koleksi template premium kami.">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#faf7f1;color:#2a251d;font-family:Georgia,'Times New Roman',serif;
+  -webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.topbar{border-bottom:1px solid #e3d9c4;background:#fffdf8}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+.brand{font-size:19px;letter-spacing:.06em;text-decoration:none}
+.brand em{font-style:italic;color:#8a6d3b}
+.topbar nav a{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;color:#6d6353;margin-left:22px}
+.topbar nav a:hover{color:#2a251d}
+.hero{text-align:center;padding:64px 22px 30px}
+.hero h1{font-size:clamp(34px,6vw,52px);font-weight:500;margin:0 0 14px;line-height:1.2}
+.hero h1 em{font-style:italic;color:#8a6d3b}
+.hero p{color:#6d6353;max-width:620px;margin:0 auto;font-size:17px;line-height:1.75}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;
+  padding:30px 22px 8px;max-width:1180px;margin:0 auto}
+.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.fbtn{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid #d8cfbd;background:#fffdf8;color:#6d6353;padding:10px 18px;border-radius:999px;cursor:pointer}
+.fbtn:hover{border-color:#8a6d3b;color:#2a251d}
+.fbtn.active{background:#2a251d;border-color:#2a251d;color:#faf7f1}
+.search{position:relative}
+.search input{font:inherit;font-size:15px;padding:11px 16px 11px 40px;border:1px solid #d8cfbd;
+  border-radius:999px;background:#fffdf8;color:#2a251d;min-width:240px}
+.search input:focus{outline:none;border-color:#8a6d3b}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#8a6d3b}
+.grid{display:grid;grid-template-columns:1fr;gap:28px;padding:36px 22px 90px;max-width:1180px;margin:0 auto}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fffdf8;border:1px solid #e3d9c4;border-radius:6px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(42,37,29,.35)}
+.thumb{aspect-ratio:4/5;overflow:hidden;background:#f3ecdc;border-bottom:1px solid #e3d9c4}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.cat{align-self:flex-start;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.26em;
+  text-transform:uppercase;color:#8a6d3b;border:1px solid #d8cfbd;border-radius:999px;padding:6px 14px}
+.card h2{font-size:24px;font-weight:500;margin:0}
+.card p.desc{margin:0;color:#6d6353;font-size:15px;line-height:1.7;flex:1}
+.card-actions{display:flex;gap:10px;margin-top:8px}
+.btn{flex:1;text-align:center;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;text-decoration:none;padding:14px 10px;border:1px solid #2a251d;
+  border-radius:3px;cursor:pointer;transition:background .25s,color .25s}
+.btn.primary{background:#2a251d;color:#faf7f1}
+.btn.primary:hover{background:transparent;color:#2a251d}
+.btn.ghost{background:transparent;color:#2a251d}
+.btn.ghost:hover{background:#2a251d;color:#faf7f1}
+.empty{display:none;text-align:center;padding:60px 20px;color:#6d6353;font-style:italic}
+.empty.show{display:block}
+.count{text-align:center;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.2em;
+  text-transform:uppercase;color:#8a6d3b;padding:6px 0 0}
+footer{border-top:1px solid #e3d9c4;padding:34px 22px;text-align:center;color:#8a7a5f;font-size:13px}
+.loading{text-align:center;padding:60px 20px;color:#6d6353}
+@media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/">Tolong<em>Mi</em> Studio</a>
+    <nav>
+      <a href="/">Beranda</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Galeri <em>Template</em> Undangan</h1>
+  <p>Delapan desain premium yang dibuat dengan teliti — dari klasik yang agung hingga sinematik yang dramatis. Pratinjau setiap desain, lalu gunakan untuk undangan Anda.</p>
+</section>
+
+<div class="controls">
+  <div class="filters" id="filters" role="group" aria-label="Filter kategori"></div>
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+    </svg>
+    <input type="search" id="q" placeholder="Cari nama template…" aria-label="Cari nama template">
+  </div>
+</div>
+<p class="count" id="count" aria-live="polite"></p>
+
+<main class="grid" id="grid" aria-live="polite">
+  <p class="loading" id="loading">Memuat template…</p>
+</main>
+<p class="empty" id="empty">Tidak ada template yang cocok dengan pencarian Anda.</p>
+
+<footer>
+  Premium Wedding Invitation Studio — delapan template, satu momen tak terlupakan.
+</footer>
+
+<script type="module" src="/js/templates.js"></script>
+</body>
+</html>

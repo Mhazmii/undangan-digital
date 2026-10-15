@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#0d0c0a"/>
+  <!-- pita foto sinematik -->
+  <rect x="0" y="180" width="800" height="420" fill="#1a1712"/>
+  <rect x="0" y="180" width="800" height="420" fill="none" stroke="#c8a35f" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#c8a35f" stroke-width="2"/>
+  <line x1="0" y1="600" x2="800" y2="600" stroke="#c8a35f" stroke-width="2"/>
+  <!-- siluet pasangan abstrak -->
+  <circle cx="340" cy="330" r="46" fill="none" stroke="#c8a35f" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="470" cy="330" r="46" fill="none" stroke="#c8a35f" stroke-width="1.5" opacity="0.8"/>
+  <path d="M340 430 C 340 470 320 490 300 500 M470 430 C 470 470 490 490 510 500" stroke="#c8a35f" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="10" fill="#c8a35f">UNDANGAN PERNIKAHAN</text>
+  <text x="400" y="740" text-anchor="middle" font-family="Georgia, serif" font-size="88" fill="#f2ead9">Nadia</text>
+  <text x="400" y="820" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="46" fill="#c8a35f">&amp;</text>
+  <text x="400" y="910" text-anchor="middle" font-family="Georgia, serif" font-size="88" fill="#f2ead9">Dimas</text>
+  <text x="400" y="968" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#a89e88">No. 05 — CONTEMPORARY DARK</text>
+</svg>

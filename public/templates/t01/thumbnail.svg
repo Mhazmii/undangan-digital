@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#faf6ee"/>
+  <rect x="44" y="44" width="712" height="912" fill="none" stroke="#dcd1ba" stroke-width="2"/>
+  <rect x="58" y="58" width="684" height="884" fill="none" stroke="#dcd1ba" stroke-width="1"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="10" fill="#8a6d3b">UNDANGAN PERNIKAHAN</text>
+  <line x1="330" y1="220" x2="470" y2="220" stroke="#dcd1ba" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="92" fill="#221d15">Aisyah</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="56" fill="#8a6d3b">&amp;</text>
+  <text x="400" y="640" text-anchor="middle" font-family="Georgia, serif" font-size="92" fill="#221d15">Rizky</text>
+  <line x1="330" y1="700" x2="470" y2="700" stroke="#dcd1ba" stroke-width="1"/>
+  <text x="400" y="760" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="8" fill="#6f6557">SABTU, 12 DESEMBER 2026</text>
+  <text x="400" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="6" fill="#a98f5f">No. 01 — EDITORIAL IVORY</text>
+</svg>

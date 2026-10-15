@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#fbfaf4"/>
+  <!-- langit kebun -->
+  <rect x="120" y="150" width="560" height="340" rx="28" fill="#eef1e2"/>
+  <rect x="120" y="150" width="560" height="340" rx="28" fill="none" stroke="#8a9a5b" stroke-width="2"/>
+  <!-- bukit & pohon abstrak -->
+  <path d="M120 420 C 240 360 340 400 440 380 C 540 360 600 400 680 380 L680 490 L120 490 Z" fill="#dfe5cb"/>
+  <g fill="none" stroke="#6b7f52" stroke-width="3">
+    <path d="M240 380 L240 300 M240 330 C 220 320 210 305 208 290 M240 330 C 260 320 270 305 272 290"/>
+    <path d="M540 380 L540 290 M540 322 C 520 312 512 298 510 284 M540 322 C 560 312 568 298 570 284"/>
+  </g>
+  <g fill="#8a9a5b" opacity="0.75">
+    <ellipse cx="208" cy="285" rx="26" ry="18"/>
+    <ellipse cx="272" cy="285" rx="26" ry="18"/>
+    <ellipse cx="240" cy="270" rx="30" ry="20"/>
+    <ellipse cx="510" cy="279" rx="26" ry="18"/>
+    <ellipse cx="570" cy="279" rx="26" ry="18"/>
+    <ellipse cx="540" cy="264" rx="30" ry="20"/>
+  </g>
+  <!-- rumput -->
+  <g stroke="#6b7f52" stroke-width="2.5" fill="none" opacity="0.8">
+    <path d="M180 470 C 182 455 178 445 172 435 M196 470 C 198 452 196 442 192 432 M620 470 C 622 455 618 445 612 435 M636 470 C 638 452 636 442 632 432"/>
+  </g>
+  <text x="400" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="9" fill="#6b7f52">UNDANGAN PERNIKAHAN</text>
+  <text x="400" y="720" text-anchor="middle" font-family="Georgia, serif" font-size="92" fill="#33402c">Nadia &amp; Dimas</text>
+  <text x="400" y="800" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="7" fill="#7a8468">SABTU, 12 DESEMBER 2026</text>
+  <!-- sprig bawah -->
+  <g fill="none" stroke="#8a9a5b" stroke-width="2">
+    <path d="M400 860 C 400 880 400 895 400 910"/>
+    <path d="M400 880 C 385 876 375 868 372 856 M400 880 C 415 876 425 868 428 856"/>
+  </g>
+  <g fill="#8a9a5b" opacity="0.7">
+    <ellipse cx="372" cy="856" rx="10" ry="5" transform="rotate(-30 372 856)"/>
+    <ellipse cx="428" cy="856" rx="10" ry="5" transform="rotate(30 428 856)"/>
+  </g>
+  <text x="400" y="968" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#8a9a5b">No. 06 — GARDEN WEDDING</text>
+</svg>

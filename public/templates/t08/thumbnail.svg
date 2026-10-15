@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#0b0a08"/>
+  <!-- frame sinematik 21:9 -->
+  <rect x="60" y="200" width="680" height="293" fill="#171310"/>
+  <rect x="60" y="200" width="680" height="293" fill="none" stroke="#c9a35f" stroke-width="1.5"/>
+  <!-- letterbox bars -->
+  <rect x="60" y="200" width="680" height="34" fill="#0b0a08"/>
+  <rect x="60" y="459" width="680" height="34" fill="#0b0a08"/>
+  <!-- siluet pasangan dalam frame -->
+  <circle cx="350" cy="330" r="40" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.85"/>
+  <circle cx="455" cy="330" r="40" fill="none" stroke="#c9a35f" stroke-width="1.4" opacity="0.85"/>
+  <path d="M350 400 C 350 425 338 438 325 445 M455 400 C 455 425 467 438 480 445" stroke="#c9a35f" stroke-width="1.4" fill="none" opacity="0.85"/>
+  <text x="400" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" letter-spacing="10" fill="#c9a35f">UNDANGAN PERNIKAHAN</text>
+  <text x="400" y="640" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="96" fill="#f5efe4">Nadia</text>
+  <text x="400" y="740" text-anchor="middle" font-family="Georgia, serif" font-size="40" letter-spacing="14" fill="#c9a35f">&amp;</text>
+  <text x="400" y="860" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="96" fill="#f5efe4">Dimas</text>
+  <line x1="330" y1="910" x2="470" y2="910" stroke="#c9a35f" stroke-width="1"/>
+  <text x="400" y="968" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#b3a88f">No. 08 — CINEMATIC ROMANCE</text>
+</svg>
